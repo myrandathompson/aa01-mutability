@@ -8,11 +8,17 @@ inclusive.
 */
 
 // Your code here 
+function selectElementsInRange(arr, start, end){
+    if (start < 0 || end >= arr.length || start > end) {
+        return []
+    }
+    return arr.slice(start, end + 1)
 
+}
 
-// console.log(selectElementsInRange([1, 2, 3], 0, 1));        // [1, 2]
-// console.log(selectElementsInRange([2, 6, 9, 3, 1], 0, 3));  // [2, 6, 9, 3]
-// console.log(selectElementsInRange([7, 9, 10, 4, 5], 2, 4)); // [10, 4, 5]
+console.log(selectElementsInRange([1, 2, 3], 0, 1));        // [1, 2]
+console.log(selectElementsInRange([2, 6, 9, 3, 1], 0, 3));  // [2, 6, 9, 3]
+console.log(selectElementsInRange([7, 9, 10, 4, 5], 2, 4)); // [10, 4, 5]
 
 /******************* DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = selectElementsInRange;
